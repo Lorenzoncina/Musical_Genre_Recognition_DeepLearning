@@ -1,0 +1,5 @@
+# Ignore the Musical_genres folder
+Musical_genres/
+
+#ignore the json file
+data.json
