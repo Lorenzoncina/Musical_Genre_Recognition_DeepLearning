@@ -32,7 +32,7 @@ def save_mfcc(dataset_path, json_path, n_mfcc=13, n_fft=20, hop_length=512, num_
         if dirpath is not dataset_path:
 
             #save semantic level
-            dirpath_components = dirpath.split("/") #genre/blues => ["genre","blues"]
+            dirpath_components = dirpath.split("\\") #genre/blues => ["genre","blues"]
             semantic_label = dirpath_components[-1] #last index
             data["mapping"].append(semantic_label)
             print("\nProcessing {}".format(semantic_label))
@@ -66,3 +66,4 @@ def save_mfcc(dataset_path, json_path, n_mfcc=13, n_fft=20, hop_length=512, num_
 
 #if __name__ == "main":
 save_mfcc(DATASET_PATH,JSON_PATH, num_segment=10)
+
